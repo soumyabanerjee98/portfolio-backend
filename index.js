@@ -14,6 +14,6 @@ mongoose
 app.use(express.json());
 app.use("/projects", projects);
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("Server running");
 });
