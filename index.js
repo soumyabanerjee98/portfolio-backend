@@ -12,7 +12,7 @@ mongoose
 .catch((err) => console.log("e*--",err));
 
 app.get("/",(req, res) => {
-    res.send("Home Page");
+    res.send("Soumya Banerjee Portfolio BackEnd");
 })
 app.use(express.json());
 app.use("/projects", projects);
