@@ -12,7 +12,7 @@ mongoose
 .catch((err) => console.log("e*--",err));
 
 app.get("/",(req, res) => {
-    res.json("Home");
+    res.send("Home Page");
 })
 app.use(express.json());
 app.use("/projects", projects);
