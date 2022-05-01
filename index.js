@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const projects = require('./routes/projects');
 
@@ -11,6 +12,7 @@ mongoose
 .then(() => console.log("Database Connected"))
 .catch((err) => console.log("e*--",err));
 
+app.use(cors());
 app.get("/",(req, res) => {
     res.send("Soumya Banerjee Portfolio BackEnd");
 })
