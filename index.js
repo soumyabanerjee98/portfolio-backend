@@ -11,7 +11,7 @@ mongoose
 .then(() => console.log("Database Connected"))
 .catch((err) => console.log("e*--",err));
 
-app.get("/",(req,res) => {
+app.get("/",(req, res) => {
     res.send("Home");
 })
 app.use(express.json());
