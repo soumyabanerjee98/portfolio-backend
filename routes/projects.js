@@ -48,6 +48,22 @@ router.delete("/:projectId", async (req, res) => {
     catch{
         (err) => {res.json(err);}
     }
+});
+router.patch("/:projectId", async (req, res) => {
+    try{
+        const upd_prj = await Projects.updateOne({projectId : req.params.projectId}, {
+            $set: { 
+                projectId: req.body.projectId,
+                projectName: req.body.projectName,
+                projectDetails: req.body.projectDetails,
+                projectLink: req.body.projectLink
+            }
+        })
+        res.json(upd_prj);
+    }
+    catch{
+        (err) => {res.json(err);}
+    }
 })
 
 module.exports = router;
